@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Growthify Services | AI video ads that stop the scroll</title>
+<meta name="description" content="Growthify Services makes AI-powered video ads for fashion and D2C brands in India.">
+<meta name="theme-color" content="#130b2b">
+<meta property="og:title" content="Growthify Services | AI video ads that stop the scroll">
+<meta property="og:description" content="AI-powered video ads for fashion and D2C brands in India.">
+<meta property="og:type" content="website">
+<!-- After deploying: add og:url and change og:image to the full https:// address of assets/og-image.jpg -->
+<meta property="og:image" content="assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#130b2b;--bg2:#1f1340;--pink:#ff3d81;--gold:#ffb21e;--teal:#3ee0d0;--ivory:#fbf3e4;--mut:#b4a9d0;--line:rgba(251,243,228,.16);--d:'Bricolage Grotesque','Arial Black',system-ui,sans-serif;--b:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ivory);font:400 1rem/1.65 var(--b);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.w{width:min(1200px,calc(100% - 2.4rem));margin:auto}
+h1,h2,h3{font-family:var(--d);font-weight:800;letter-spacing:-.035em;line-height:.98}
+h2{font-size:clamp(2.3rem,5.4vw,4.4rem);max-width:15ch}
+.lab{color:var(--teal);font-weight:600;font-size:.95rem}
+.sec{padding:clamp(4.5rem,9vw,8rem) 0}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.4rem;border-radius:99px;border:1.5px solid var(--ivory);font-weight:600;font-size:.92rem;transition:transform .25s,background .25s,color .25s}
+.btn:hover{background:var(--ivory);color:var(--bg);transform:translateY(-2px)}
+.btn.p{background:var(--gold);border-color:var(--gold);color:#1b1030}
+.btn.p:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(19,11,43,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.br{display:flex;align-items:center;gap:.7rem;font:800 1.05rem var(--d);letter-spacing:-.02em}
+.br img{width:38px;height:38px;border-radius:50%;object-fit:cover}
+.nl{display:flex;align-items:center;gap:1.6rem;font-size:.9rem;color:var(--mut)}
+.nl a:hover{color:var(--ivory)}
+.nl .btn{padding:.6rem 1.1rem;color:#1b1030}
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:clamp(2.5rem,6vw,5rem) 0 4rem;position:relative}
+.hero:before{content:"";position:absolute;right:-10%;top:-10%;width:60vw;height:60vw;max-width:760px;max-height:760px;background:radial-gradient(circle,rgba(255,61,129,.28),rgba(255,178,30,.08) 45%,transparent 68%);z-index:-1;animation:pulse 9s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.12) translate(-3%,4%)}}
+h1{font-size:clamp(3.4rem,9.4vw,8.2rem);margin:1rem 0 1.4rem;max-width:7ch}
+.lede{color:#d9d0ee;max-width:32rem;font-size:1.12rem}
+.acts{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.note{margin-top:1.6rem;color:var(--mut);font-size:.85rem}
+.stage{display:grid;place-items:center;perspective:1100px}
+.ph{width:min(300px,72vw);aspect-ratio:9/16;border-radius:2.3rem;padding:8px;background:#07040f;border:1px solid rgba(251,243,228,.35);box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 6px rgba(255,178,30,.08);transition:transform .2s;transform:rotateY(-9deg) rotateZ(2deg);position:relative}
+.scr{position:relative;width:100%;height:100%;border-radius:1.7rem;overflow:hidden;background:#0c0720}
+.feed{height:500%;display:flex;flex-direction:column;animation:scrl 3.4s cubic-bezier(.75,0,.15,1) 1s both}
+@keyframes scrl{0%{transform:translateY(0);filter:blur(0)}25%,75%{filter:blur(3px)}100%{transform:translateY(-80%);filter:blur(0)}}
+.sl{flex:0 0 20%;position:relative;overflow:hidden}
+.sl img,.sl video{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;z-index:3;left:.9rem;top:.9rem;padding:.3rem .7rem;border-radius:99px;background:rgba(19,11,43,.75);backdrop-filter:blur(6px);font-size:.72rem;font-weight:600}
+.tag i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pink);margin-right:.4rem;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.25}}
+.again{position:absolute;z-index:3;right:.8rem;bottom:.8rem;padding:.35rem .8rem;border-radius:99px;background:var(--gold);color:#1b1030;font-size:.72rem;font-weight:700;opacity:0;pointer-events:none;transition:opacity .4s}
+.again.on{opacity:1;pointer-events:auto}
+/* strip */
+.strip{background:var(--gold);color:#1b1030;transform:rotate(-1.6deg);margin:1rem -2vw;overflow:hidden;white-space:nowrap;border-block:2px solid #1b1030}
+.strip div{display:inline-block;padding:.9rem 0;font:800 1.35rem var(--d);letter-spacing:-.02em;animation:mq 28s linear infinite}
+.strip span{margin:0 1.4rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* work */
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.head p{max-width:27rem;color:var(--mut)}
+.fl{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.fl button{padding:.5rem 1rem;border-radius:99px;border:1px solid var(--line);font-size:.88rem;color:var(--mut);transition:.2s}
+.fl button[aria-pressed=true]{background:var(--ivory);color:var(--bg);border-color:var(--ivory)}
+.rail{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x proximity;padding:.8rem max(1.2rem,calc((100vw - 1200px)/2)) 1.6rem;cursor:grab;scrollbar-width:thin;scrollbar-color:var(--pink) transparent}
+.rail.dg{cursor:grabbing;scroll-snap-type:none}
+.rc{flex:0 0 clamp(200px,21vw,250px);aspect-ratio:9/16;position:relative;border-radius:1.3rem;overflow:hidden;scroll-snap-align:start;text-align:left;transition:transform .2s,box-shadow .3s;border:1px solid var(--line);background:var(--bg2)}
+.rc:hover{box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.rc img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.rc:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(19,11,43,.92),transparent 55%)}
+.pl{position:absolute;z-index:2;right:.8rem;top:.8rem;width:42px;height:42px;border-radius:50%;background:var(--gold);display:grid;place-items:center;transition:transform .25s}
+.pl:before{content:"";border-left:11px solid #1b1030;border-block:7px solid transparent;margin-left:3px}
+.rc:hover .pl{transform:scale(1.18)}
+.cp{position:absolute;z-index:2;left:1rem;right:1rem;bottom:1rem}
+.cp b{display:block;font:800 1.1rem/1.1 var(--d);letter-spacing:-.02em}
+.cp small{color:var(--mut);font-size:.78rem}
+.disc{margin-top:.6rem;color:var(--mut);font-size:.85rem}
+/* hook lab */
+.lab2{background:var(--bg2);border-block:1px solid var(--line)}
+.hg{display:grid;grid-template-columns:1fr auto;gap:clamp(2rem,6vw,6rem);align-items:center}
+.hg p{color:#d9d0ee;max-width:30rem;margin:1.2rem 0 1.6rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:1.2rem}
+.tabs button{padding:.6rem 1.2rem;border-radius:99px;border:1.5px solid var(--line);font-weight:600;transition:.2s}
+.tabs button[aria-selected=true]{background:var(--pink);border-color:var(--pink);color:#fff}
+.hp{width:min(290px,76vw);aspect-ratio:9/16;border-radius:2rem;overflow:hidden;position:relative;border:1px solid rgba(251,243,228,.3);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.hp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s linear}
+.hp.run img{transform:scale(1.12)}
+.hp:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(19,11,43,.95),transparent 60%)}
+.hk{position:absolute;z-index:2;left:1.1rem;right:1.1rem;bottom:2.2rem;font:800 1.45rem/1.12 var(--d);letter-spacing:-.025em;min-height:5.2rem}
+.hk:after{content:"";display:inline-block;width:3px;height:1.2em;background:var(--gold);margin-left:3px;vertical-align:-.2em;animation:blink .8s infinite}
+.bar{position:absolute;z-index:2;left:1.1rem;right:1.1rem;bottom:1.1rem;height:3px;background:rgba(251,243,228,.25);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--gold)}
+.bar.go i{animation:fill 6s linear forwards}
+@keyframes fill{to{width:100%}}
+.kind{position:absolute;z-index:2;top:1rem;left:1rem;padding:.3rem .7rem;border-radius:99px;background:rgba(19,11,43,.75);font-size:.74rem;font-weight:600}
+/* services */
+.sv a{display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;align-items:baseline;padding:1.6rem 0;border-bottom:1px solid var(--line);transition:padding .3s,color .3s}
+.sv a:first-child{border-top:1px solid var(--line)}
+.sv h3{font-size:clamp(1.8rem,3.6vw,3rem)}
+.sv p{color:var(--mut)}
+.sv a:hover{padding-left:1rem;color:var(--gold)}
+/* process */
+.pr{position:relative;max-width:760px;margin-top:2.5rem;padding-left:2.6rem}
+.pr:before,.pf{content:"";position:absolute;left:11px;top:6px;width:3px;border-radius:3px;background:var(--line);bottom:6px}
+.pf{background:linear-gradient(var(--gold),var(--pink));height:0;bottom:auto}
+.st{position:relative;padding:0 0 2.4rem;opacity:.45;transition:opacity .4s}
+.st.on{opacity:1}
+.st:before{content:attr(data-n);position:absolute;left:-2.6rem;top:0;width:26px;height:26px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:grid;place-items:center;font-size:.72rem;font-weight:700;color:var(--gold)}
+.st h3{font-size:1.7rem;margin-bottom:.4rem}
+.st p{color:#d9d0ee;max-width:36rem}
+/* packages */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.pk div{padding:1.8rem;border-radius:1.4rem;border:1px solid var(--line);background:var(--bg2);display:flex;flex-direction:column;gap:.7rem}
+.pk div:nth-child(2){background:var(--pink);border-color:var(--pink)}
+.pk h3{font-size:1.8rem}
+.pk p{flex:1;color:#d9d0ee}
+.pk div:nth-child(2) p{color:#fff}
+.pk .btn{align-self:flex-start}
+.pk div:nth-child(2) .btn{border-color:#fff}
+.pk div:nth-child(2) .btn:hover{background:#fff;color:var(--pink)}
+/* faq */
+.fq{max-width:820px;margin-top:2rem}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.3rem 0;font:800 1.25rem var(--d);letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--gold);font-size:1.6rem;line-height:1;transition:transform .3s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{padding:0 0 1.3rem;color:#d9d0ee;max-width:42rem}
+/* contact */
+.ct{background:var(--gold);color:#1b1030}
+.cg{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+.ct h2{max-width:11ch}
+.ct .lede{color:#3a2756;margin:1.2rem 0 1.6rem}
+.ct .btn{border-color:#1b1030;color:#1b1030}
+.ct .btn:hover{background:#1b1030;color:var(--gold)}
+.ct .btn.p{background:#1b1030;color:var(--gold)}
+.ct .btn.p:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+.dt{display:grid;gap:.4rem;margin-top:1.6rem;font-weight:600}
+.dt a:hover{text-decoration:underline}
+form{background:#fff8ea;border-radius:1.6rem;padding:1.8rem;display:grid;gap:1rem;border:2px solid #1b1030;box-shadow:8px 8px 0 #1b1030}
+form h3{font-size:1.7rem}
+label{font-size:.85rem;font-weight:600;display:grid;gap:.35rem}
+input{padding:.85rem 1rem;border-radius:.8rem;border:1.5px solid #1b1030;background:#fff;font:inherit;color:#1b1030}
+form small{color:#5b4a73}
+footer{padding:2rem 0;color:var(--mut);font-size:.85rem}
+footer .w{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fab{position:fixed;z-index:40;right:1.1rem;bottom:1.1rem;padding:.85rem 1.3rem;border-radius:99px;background:#25d366;color:#08210f;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-5px)}}
+/* lightbox + loader */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(10,6,24,.94);display:none;place-items:center}
+.lb.on{display:grid}
+.lb video{height:min(86vh,calc(92vw*16/9));aspect-ratio:9/16;border-radius:1.2rem;background:#000;max-width:92vw}
+.lb button{position:absolute;right:1.2rem;top:1rem;width:46px;height:46px;border-radius:50%;background:var(--ivory);color:var(--bg);font-size:1.6rem;line-height:1}
+.ld{position:fixed;inset:0;z-index:80;background:var(--bg);display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+.ld.x{opacity:0;visibility:hidden}
+.ld img{width:clamp(90px,16vw,150px);border-radius:50%;animation:pop 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.6) rotate(-14deg)}}
+@media(max-width:860px){.hero,.hg,.cg,.sv a{grid-template-columns:1fr}.nl a:not(.btn){display:none}.pk{grid-template-columns:1fr}.hg .hp{margin:auto}.stage{margin-top:1rem}.fab{left:1.1rem;text-align:center;justify-content:center}.ph{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ld" id="ld"><img src="assets/growthify-logo.jpg" alt="Growthify Services"></div>
+
+<header class="nav"><div class="w">
+<a class="br" href="#top"><img src="assets/growthify-logo.jpg" alt="">Growthify Services</a>
+<nav class="nl" aria-label="Main"><a href="#work">Work</a><a href="#hooks">Hook Lab</a><a href="#process">Process</a><a href="#faq">FAQ</a><a class="btn p" href="#contact">Get a sample</a></nav>
+</div></header>
+
+<main id="top">
+<section class="w hero">
+<div>
+<p class="lab">AI video ads for fashion and D2C brands in India</p>
+<h1>Make the scroll stop.</h1>
+<p class="lede">We make short vertical ads with AI presenters, sharp edits and hooks you can test. Watch the phone: that’s the moment we design for.</p>
+<div class="acts"><a class="btn p" href="#contact">Get a free sample ad</a><a class="btn" href="#work">See the work</a></div>
+<p class="note">Concept work for fictional brands. Presenters are AI-generated.</p>
+</div>
+<div class="stage" id="stage">
+<div class="ph" id="ph"><div class="scr">
+<span class="tag" id="tag"><i></i>Scrolling…</span>
+<div class="feed" id="feed">
+<div class="sl"><img src="assets/perfume-1-thumb.jpg" alt=""></div>
+<div class="sl"><img src="assets/festive-sale-thumb.jpg" alt=""></div>
+<div class="sl"><img src="assets/jewellery-thumb.jpg" alt=""></div>
+<div class="sl"><img src="assets/fashion-3-thumb.jpg" alt=""></div>
+<div class="sl"><video id="hv" poster="assets/fashion-1-thumb.jpg" muted loop playsinline preload="none"><source src="Fashion%201.mp4" type="video/mp4"></video></div>
+</div>
+<button class="again" id="again">Scroll again</button>
+</div></div>
+</div>
+</section>
+
+<div class="strip" aria-hidden="true"><div id="mq"></div></div>
+
+<section class="sec" id="work" aria-labelledby="wt">
+<div class="w head"><div><p class="lab">Selected concept films</p><h2 id="wt">Tap a frame. Watch it move.</h2></div><p>Every film here is a concept for a fictional brand. Drag the row sideways or use the filters.</p></div>
+<div class="w fl" id="fl"></div>
+<div class="rail" id="rail" aria-label="Concept film gallery"></div>
+<div class="w"><p class="disc">Fictional brand concepts. AI-generated presenters. Not client work or campaign results.</p></div>
+</section>
+
+<section class="sec lab2" id="hooks" aria-labelledby="ht"><div class="w hg">
+<div>
+<p class="lab">Hook Lab</p>
+<h2 id="ht">Same ad. Three openings.</h2>
+<p>The first three seconds decide whether someone keeps watching. We make several openings for one ad, so you can run them and see which one your audience likes.</p>
+<div class="tabs" role="tablist" id="tabs" aria-label="Choose an opening"></div>
+<a class="btn" href="#contact">Try it for my product</a>
+<p class="disc">Concept demo for a fictional jewellery brand. Not a performance claim.</p>
+</div>
+<div class="hp" id="hp" role="tabpanel" aria-live="polite"><img src="assets/jewellery-thumb.jpg" alt=""><span class="kind" id="kind"></span><div class="hk" id="hk"></div><div class="bar" id="bar"><i></i></div></div>
+</div></section>
+
+<section class="sec w" id="services" aria-labelledby="st">
+<p class="lab">What we make</p><h2 id="st" style="margin-bottom:2.2rem">Four kinds of ads.</h2>
+<div class="sv">
+<a href="#contact"><h3>AI influencer ads</h3><p>A creator-style presenter talks about your product in Hindi, Hinglish or English.</p></a>
+<a href="#contact"><h3>Product reels</h3><p>Close-ups, styling and clean motion for kurtis, dresses, jewellery and more.</p></a>
+<a href="#contact"><h3>Hook variations</h3><p>One ad, several openings, so your team can test what works.</p></a>
+<a href="#contact"><h3>Festive and sale edits</h3><p>Offer-led videos timed for Diwali, weddings and sale days.</p></a>
+</div></section>
+
+<section class="sec w" id="process" aria-labelledby="pt">
+<p class="lab">How it works</p><h2 id="pt">From brief to finished ad.</h2>
+<div class="pr" id="pr"><div class="pf" id="pf"></div>
+<div class="st on" data-n="1"><h3>Share your product</h3><p>Send photos or footage, your audience and what the ad should do.</p></div>
+<div class="st" data-n="2"><h3>Pick an opening</h3><p>We suggest a look and a few hooks. You choose the direction.</p></div>
+<div class="st" data-n="3"><h3>We make the ad</h3><p>We create the video, with an AI presenter or product-only visuals, and refine it with your feedback.</p></div>
+<div class="st" data-n="4"><h3>You get the files</h3><p>Vertical videos in the formats we agreed, ready to post or run as ads.</p></div>
+</div></section>
+
+<section class="sec w" id="packages" aria-labelledby="kt">
+<p class="lab">Packages</p><h2 id="kt">Start small. Grow when it works.</h2>
+<div class="pk">
+<div><h3>Starter</h3><p>One concept video to introduce your product and settle on a direction.</p><a class="btn" href="#contact">Ask for a quote</a></div>
+<div><h3>Monthly</h3><p>A set number of videos every month, planned around your content calendar.</p><a class="btn" href="#contact">Ask for a quote</a></div>
+<div><h3>Custom</h3><p>Festive campaigns, hook sets or any brief that needs its own plan.</p><a class="btn" href="#contact">Ask for a quote</a></div>
+</div>
+<p class="disc">Price, number of videos, revisions and timing are agreed in writing before work starts.</p>
+</section>
+
+<section class="sec w" id="faq" aria-labelledby="ft">
+<p class="lab">Questions</p><h2 id="ft">Before you message us.</h2>
+<div class="fq">
+<details><summary>Are the people in your ads real?</summary><p>No. Our presenters are AI-generated, and we say so. We can also make product-only videos with no presenter.</p></details>
+<details><summary>Is the work on this site client work?</summary><p>No. Every film here is concept work for fictional brands, and none of it shows campaign results.</p></details>
+<details><summary>What do you need from me?</summary><p>Your product photos or footage, who you sell to, and what the video should do. We’ll ask for the rest in a short brief.</p></details>
+<details><summary>Can you make Hindi or Hinglish versions?</summary><p>Yes. We can make the same ad in Hindi, Hinglish and English.</p></details>
+<details><summary>How much does it cost?</summary><p>It depends on the brief. Message us and we’ll send a quote before any work begins.</p></details>
+</div></section>
+
+<section class="sec ct" id="contact" aria-labelledby="ct"><div class="w cg">
+<div>
+<p class="lab" style="color:#5b1d44">Free sample</p>
+<h2 id="ct">Tell us what you sell.</h2>
+<p class="lede">Send your brand and product. We’ll reply on WhatsApp with a sample direction for your first ad.</p>
+<a class="btn p" id="wa1" href="#">Message Growthify</a>
+<div class="dt"><a href="https://wa.me/918485074377">WhatsApp: +91 84850 74377</a><a href="mailto:growthifyservices.official@gmail.com">growthifyservices.official@gmail.com</a><a id="ig" href="#" target="_blank" rel="noopener" hidden>Instagram</a></div>
+</div>
+<form id="sf"><h3>Request a sample</h3>
+<label>Brand name<input id="bn" required autocomplete="organization" placeholder="e.g. Studio A"></label>
+<label>Product<input id="pn" required placeholder="e.g. cotton kurti set"></label>
+<button class="btn p" type="submit">Send on WhatsApp</button>
+<small>This opens WhatsApp with your message filled in. You can read it before you send.</small>
+</form>
+</div></section>
+</main>
+
+<footer><div class="w"><span>© <span id="yr"></span> Growthify Services</span><span>Concept work shown is for fictional brands. Presenters are AI-generated.</span></div></footer>
+
+<a class="fab" id="wa2" href="#" aria-label="Chat on WhatsApp">WhatsApp us</a>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Video player"><button id="lx" aria-label="Close video">×</button><video id="lv" controls playsinline preload="none"></video></div>
+
+<script>
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const WA='https://wa.me/918485074377?text=',IG=''; /* IG: put your Instagram handle here, e.g. 'growthify.services' */
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FINE=matchMedia('(pointer:fine)').matches;
+const msg=t=>WA+encodeURIComponent(t);
+$('#wa1').href=$('#wa2').href=msg("Hi Growthify, I'd like a sample ad for my brand.");
+if(IG){const a=$('#ig');a.href='https://instagram.com/'+IG;a.hidden=false}
+$('#yr').textContent=new Date().getFullYear();
+$('#mq').innerHTML=('<span>AI influencer ads</span><span>✦</span><span>Product reels</span><span>✦</span><span>Hook variations</span><span>✦</span><span>Festive sale edits</span><span>✦</span><span>Hindi · Hinglish · English</span><span>✦</span>').repeat(4);
+/* loader */
+const ld=$('#ld'),hide=()=>ld.classList.add('x');setTimeout(hide,RM?0:1200);
+/* hero: the scroll stops, then the ad plays */
+const feed=$('#feed'),hv=$('#hv'),tag=$('#tag'),again=$('#again');
+feed.addEventListener('animationend',e=>{if(e.target!==feed)return;tag.innerHTML='<i></i>Stopped. Watching.';hv.play().catch(()=>{});again.classList.add('on')});
+again.onclick=()=>{again.classList.remove('on');hv.pause();tag.innerHTML='<i></i>Scrolling…';feed.style.animation='none';void feed.offsetWidth;feed.style.animation=''};
+if(RM){feed.style.animation='none';feed.style.transform='translateY(-80%)';hv.play().catch(()=>{});again.classList.add('on')}
+/* tilt helper (reacts to the pointer) */
+function tilt(el,max,base){if(!FINE||RM)return;el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(800px) rotateY(${x*max+(base||0)}deg) rotateX(${-y*max}deg) scale(1.03)`});el.addEventListener('pointerleave',()=>el.style.transform='')}
+tilt($('#ph'),10,-9);
+/* work gallery */
+const reels=[
+['Fashion Film 01','Fashion','Fashion 1.mp4','assets/fashion-1-thumb.jpg','Dress and kurti ad, AI presenter'],
+['Fashion Film 02','Fashion','Fashion 2.mp4','assets/fashion-2-thumb.jpg','Dress and kurti ad, AI presenter'],
+['Fashion Film 03','Fashion','Fashion 3.mp4','assets/fashion-3-thumb.jpg','Dress and kurti ad, AI presenter'],
+['Fashion Film 04','Fashion','Fashion 4.mp4','assets/fashion-4-thumb.jpg','Dress and kurti ad, AI presenter'],
+['Fashion Film 05','Fashion','Fashion 5.mp4','assets/fashion-5-thumb.jpg','Dress and kurti ad, AI presenter'],
+['Jewellery Reel','Jewellery','Jewellary.mp4','assets/jewellery-thumb.jpg','Jewellery styling concept'],
+['Perfume Film 01','Perfume','Luxury_perfume_1.mp4','assets/perfume-1-thumb.jpg','Luxury perfume concept'],
+['Perfume Film 02','Perfume','Luxury_perfume_2.mp4','assets/perfume-2-thumb.jpg','Luxury perfume concept'],
+['Festive Sale Ad','Festive','Festive sale offer ad.mp4','assets/festive-sale-thumb.jpg','Festive offer concept']];
+const rail=$('#rail'),fl=$('#fl');
+rail.innerHTML=reels.map((r,i)=>`<button class="rc" data-c="${r[1]}" data-i="${i}" aria-label="Play ${r[0]}"><img src="${r[3]}" alt="" loading="lazy" decoding="async"><span class="pl"></span><span class="cp"><b>${r[0]}</b><small>${r[4]}</small></span></button>`).join('');
+['All','Fashion','Jewellery','Perfume','Festive'].forEach((c,i)=>{const b=document.createElement('button');b.textContent=c;b.setAttribute('aria-pressed',i==0);b.onclick=()=>{$$('button',fl).forEach(x=>x.setAttribute('aria-pressed',x===b));$$('.rc').forEach(k=>k.hidden=c!=='All'&&k.dataset.c!==c);rail.scrollTo({left:0})};fl.append(b)});
+$$('.rc').forEach(k=>tilt(k,9));
+let drag=0,sx=0,sl=0,moved=0;
+rail.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;drag=1;moved=0;sx=e.clientX;sl=rail.scrollLeft});
+addEventListener('pointermove',e=>{if(!drag)return;const d=e.clientX-sx;if(Math.abs(d)>5){moved=1;rail.classList.add('dg')}rail.scrollLeft=sl-d});
+addEventListener('pointerup',()=>{drag=0;rail.classList.remove('dg')});
+/* lightbox */
+const lb=$('#lb'),lv=$('#lv');
+function openV(i){lv.src=encodeURI(reels[i][2]);lb.classList.add('on');lv.play().catch(()=>{});$('#lx').focus()}
+function closeV(){lb.classList.remove('on');lv.pause();lv.removeAttribute('src');lv.load()}
+rail.addEventListener('click',e=>{const k=e.target.closest('.rc');if(k&&!moved)openV(+k.dataset.i)});
+$('#lx').onclick=closeV;lb.addEventListener('click',e=>{if(e.target===lb)closeV()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('on'))closeV()});
+/* hook lab */
+const hooks=[['A','Problem opening','Jewellery kharidte waqt ye galti mat karna!'],['B','Social proof opening','Sab pooch rahe hain, ye earrings kahan se li?'],['C','Offer opening','Festive special: 2 jewellery sets, sirf ₹799 mein!']];
+const tabs=$('#tabs'),hk=$('#hk'),kind=$('#kind'),bar=$('#bar'),hp=$('#hp');let cur=0,tm,ty,auto=!RM;
+hooks.forEach((h,i)=>{const b=document.createElement('button');b.setAttribute('role','tab');b.textContent='Opening '+h[0];b.onclick=()=>{auto=false;show(i)};tabs.append(b)});
+function show(i){cur=i;$$('button',tabs).forEach((b,j)=>b.setAttribute('aria-selected',j===i));kind.textContent=hooks[i][1];hk.textContent='';clearInterval(ty);clearTimeout(tm);let n=0,t=hooks[i][2];
+if(RM){hk.textContent=t}else ty=setInterval(()=>{hk.textContent=t.slice(0,++n);if(n>=t.length)clearInterval(ty)},32);
+bar.classList.remove('go');hp.classList.remove('run');void bar.offsetWidth;
+if(auto){bar.classList.add('go');hp.classList.add('run');tm=setTimeout(()=>show((cur+1)%3),6000)}}
+show(0);
+/* process line */
+const st=$$('.st'),pf=$('#pf'),pr=$('#pr');
+function prog(){const r=pr.getBoundingClientRect(),vh=innerHeight,p=Math.min(1,Math.max(0,(vh*.6-r.top)/r.height));pf.style.height=(p*(r.height-12))+'px';st.forEach(s=>{s.classList.toggle('on',s.getBoundingClientRect().top<vh*.62)})}
+addEventListener('scroll',prog,{passive:true});addEventListener('resize',prog);prog();
+/* form */
+$('#sf').addEventListener('submit',e=>{e.preventDefault();window.open(msg(`Hi Growthify, I'm from ${$('#bn').value.trim()}. I'd like a sample ad for ${$('#pn').value.trim()}.`),'_blank','noopener')});
+</script>
+</body>
+</html>
